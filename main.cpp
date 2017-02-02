@@ -397,15 +397,15 @@ extern "C" void* ThreadStats(void*) {
   return nullptr;
 }
 
-static const string mainnet_seeds[] = {"main.seeder.baseserv.com", "main.seeder.uksafedns.net", "163.172.213.62", "51.15.3.128", ""};
+static const string mainnet_seeds[] = {"main.seeder.baseserv.com", "main.seeder.uksafedns.net", "128.199.165.79", "162.243.38.133", "163.172.213.62" ,"51.15.3.128" ,""};
 static const string testnet_seeds[] = {"",
                                        ""}; // TODO: Change in the future!
 static const string *seeds = mainnet_seeds;
 
 extern "C" void* ThreadSeeder(void*) {
   if (!fTestNet){
-    db.Add(CService("163.172.213.62", 15200), true);
-    db.Add(CService("51.15.3.128", 15200), true);
+    db.Add(CService("163.172.213.62", 12700), true);
+    db.Add(CService("51.15.3.128", 12700), true);
   }
   do {
     for (int i=0; seeds[i] != ""; i++) {
