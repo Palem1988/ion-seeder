@@ -397,7 +397,7 @@ extern "C" void* ThreadStats(void*) {
   return nullptr;
 }
 
-static const string mainnet_seeds[] = {"main.seeder.baseserv.com", "main.seeder.uksafedns.net", "128.199.165.79", "162.243.38.133", "163.172.213.62" ,"51.15.3.128" ,""};
+static const string mainnet_seeds[] = {"45.32.90.59", "108.61.171.118", "51.15.37.54", "73.52.28.242", "45.32.68.232", "163.172.42.67", "45.63.9.73", ""};
 static const string testnet_seeds[] = {"",
                                        ""}; // TODO: Change in the future!
 static const string *seeds = mainnet_seeds;
