@@ -1,7 +1,7 @@
-bitcoin-seeder
+ION-Seeder
 ==============
 
-Bitcoin-seeder is a crawler for the Bitcoin network, which exposes a list
+Ion-seeder is a crawler for the ionomy network, which exposes a list
 of reliable nodes via a built-in DNS server.
 
 Features:
