@@ -38,6 +38,30 @@ On the system vps.example.com, you can now run dnsseed:
 If you want the DNS server to report SOA records, please provide an
 e-mail address (with the @ part replaced by .) using -m.
 
+ADAPTING TO CHAIN PARAMETERS
+-----
+
+The seeder needs to know where to start looking for seeds, and it needs 
+know the criteria for accepting or rejecting clients.
+
+The relevant settings are located in:
+* dh.h:15 
+update the minimum version number for clients to accept
+#define REQUIRE_VERSION 95610
+
+* protocol.cpp:25
+Update the magic number to the number defined in the coin's chainparams.cpp
+unsigned char pchMessageStart[4] = { 0xc4, 0xe1, 0xd8, 0xec };
+
+* protocol.h:21
+Update the default port number for mainnet and testnet
+  return testnet ? 27170 : 12700;
+
+* serialise.h:63
+Update the protocol version that the seeder itself published
+static const int PROTOCOL_VERSION = 95610;
+
+
 COMPILING
 ---------
 Compiling will require boost and ssl.  On debian systems, these are provided
