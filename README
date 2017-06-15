@@ -45,6 +45,14 @@ The seeder needs to know where to start looking for seeds, and it needs
 know the criteria for accepting or rejecting clients.
 
 The relevant settings are located in:
+* main.cpp:400
+Add a list of initial known nodes
+static const string mainnet_seeds[] = {"45.32.90.59", "108.61.171.118", "51.15.37.54", "73.52.28.242", "45.32.68.232", "163.172.42.67", "45.63.9.73", ""};
+static const string testnet_seeds[] = {"69.178.110.19", "51.15.49.25", "185.107.224.197", "212.114.110.152", "45.76.113.100", ""}; 
+
+* main.cpp:461
+Update the magic number to the number defined in the coin's chainparams.cpp
+
 * dh.h:15 
 update the minimum version number for clients to accept
 #define REQUIRE_VERSION 95610
